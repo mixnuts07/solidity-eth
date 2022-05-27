@@ -39,6 +39,7 @@ iSApprovedForAll(address _owner, address _operator)
  アドレスがオペレータとして承認されてるか確認。
 
  
+ ・Etherscan .. ブラウザで全てのブロックとトランザクションを検査できる。
  
  
  
