@@ -1,3 +1,4 @@
+【Chapter4
 truffle init .. プロジェクト初期化
 
 ・Tree construction
@@ -78,4 +79,20 @@ owner() .. getter
 address型２つ
 address
 address payable .. transfer / send メソッド使える！
+---------------------------------------------------------------------------------------------------------
+【Chapter5】
+
+・コントラクトのデプロイ方法３つ
+①Ganache
+ローカルブロックチェーン
+②Parity　(Geth, Open ethereum, Nether mind, Besu, Trinity)
+イーサリアムクライアント。 → nodeを動かすためのsoftware。
+https://note.com/standenglish/n/n2f90bf24f1a0
+
+Goerliテストネットワークにコントラクトをデプロイ！
+③Infura ..　マネージドイーサリアムノードのサードパーティプロバイダ。
+アプリのパフォーマンスや使用率を把握できる・
+Rinkebyテストネットワークにコントラクトをデプロイ！
+
+
 ---------------------------------------------------------------------------------------------------------
