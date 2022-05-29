@@ -1,0 +1,81 @@
+truffle init .. プロジェクト初期化
+
+・Tree construction
+contracts .. solidityプログラムはいち
+migrations .. contractをネットワークにデプロイするために使う！
+test .. テストコードが配置
+truffle-config.js .. truffleの設定ファイル
+
+・truffle-config.jsの設定
+GanacheとlocalhostでRPC通信するために以下設定
+module.exports = {
+    networks: {
+      development: {
+         host: "127.0.0.1",     // Localhost (default: none)
+         port: 7545,            // Standard Ethereum port (default: none)
+         network_id: "*",       // Any network (default: none)
+      }
+    }
+}
+
+→ Ganache起動
+Add project → truffle-config.jsを追加してリンク！
+
+→ $ truffle console 
+truffleからganacheのプライベートネットワークに接続できるか確認！
+truffle(development) > でOK!
+
+→ contract作成
+truffle create contract HelloWorld
+でHello World の　contractができる！
+
+→ truffle compile 
+コンパイル！
+build/contracts 直下に配置される！
+
+→truffle create migration HelloWorld
+migrationsファイル作成！
+migrations内に15xxxx_hello_world.jsが作成される！
+
+→ truffle migrate
+migrate 直下のスクリプト実行！　デプロイ！
+
+（一度実行したcontractを修正して再度デプロイするときは）
+truffle migrate --reset
+
+
+→ truffle test
+test内のテストを実行！
+
+
+---------------------------------------------------------------------------------------------------------
+
+デプロイされたsmart contract はEthネットワークの特定のアドレスに格納される。
+
+---------------------------------------------------------------------------------------------------------
+truffle　では　accounts 変数でアカウントにアクセスできる
+public 　
+コントラクトの中・他のcontractから呼び出せる
+external 
+他のcontractからは呼び出せるが、コントラクトの中からは呼び出せない
+
+private
+コントラクトの中からだけ。
+internal
+
+pure
+チェーンから読み取りも書き込みもできない
+view
+チェーンから読み取りはできる
+
+---------------------------------------------------------------------------------------------------------
+状態変数 .. contract内の全ての関数からアクセスできる！
+Ex.
+string private _greeting
+
+owner() .. getter
+
+address型２つ
+address
+address payable .. transfer / send メソッド使える！
+---------------------------------------------------------------------------------------------------------
