@@ -1,0 +1,1 @@
+truffle unbox react .. react UIと統合された新しいプロジェクト作成
