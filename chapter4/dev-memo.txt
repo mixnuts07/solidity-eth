@@ -78,7 +78,7 @@ owner() .. getter
 
 address型２つ
 address
-address payable .. transfer / send メソッド使える！
+address payable .. transfer / send メソッド使える！  && イーサも受け取れる！　→ 受取人のアドレスだけを address payable に！
 ---------------------------------------------------------------------------------------------------------
 【Chapter5】
 
